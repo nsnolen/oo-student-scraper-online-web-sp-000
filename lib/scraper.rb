@@ -12,6 +12,9 @@ class Scraper
         studnet_location = student.css('.student-location').text
         student_profile_link = "#{{student.attr('href')}}"
         students<<{location:student_location, name:studnet_name, profile_url:student_profile_link}
+      end
+    end
+    students
 
   end
 
