@@ -28,13 +28,13 @@ class Scraper
         elsif link.include?("github")
             student[:github] = link
           elsif link.include?("profile_quote")
-            student[:profile_quote] = link
-            elsif link.include?("twitter")
               student[:twitter] = link
             elsif link.include?("bio")
               studnet[:bio] = link
             else student[:blog] = link
             end
+            student[:profile_quote] = profile_page.css(".profile-quote").text if profile_page.css(".profile-quote")
+            student[:bio] = profile_page.css("div.bio-content.content-holder div.description-holder p").text if profile_page.css("div.bio-content.content-holder div.description-holder p")
           end
             student
 
