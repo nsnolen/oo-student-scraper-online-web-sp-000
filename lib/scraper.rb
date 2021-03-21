@@ -31,6 +31,8 @@ class Scraper
             student[:profile_quote] = link
             elsif link.include?("twitter")
               student[:twitter] = link
+            elsif link.include?("bio")
+              studnet[:bio] = link
             else student[:blog] = link
             end
           end
