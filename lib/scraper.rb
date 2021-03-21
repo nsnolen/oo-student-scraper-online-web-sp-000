@@ -9,9 +9,9 @@ class Scraper
     page.css("div.roster-cards-container").each do |card|
       card.css(".student-card a").each do |student|
         student_name = student.css('.student-name').text
-        studnet_location = student.css('.student-location').text
+        student_location = student.css('.student-location').text
         student_profile_link = "#{student.attr('href')}"
-        students<<{location:student_location, name:studnet_name, profile_url:student_profile_link}
+        students<<{location:student_location, name:student_name, profile_url:student_profile_link}
       end
     end
     students
