@@ -30,6 +30,7 @@ class Scraper
           elsif link.include?("twitter")
               student[:twitter] = link
             else student[:blog] = link
+            end
 
   end
 
